@@ -17,7 +17,9 @@ def create_laplacian_image_pyramid(image, pyramid_levels):
     gauss_pyramid = create_gaussian_image_pyramid(image, pyramid_levels)
     laplacian_pyramid = []
     for i in range(pyramid_levels - 1):
-        laplacian_pyramid.append((gauss_pyramid[i] - cv2.pyrUp(gauss_pyramid[i + 1])) + 0)
+        up = cv2.pyrUp(gauss_pyramid[i + 1])
+        up_resized = cv2.resize(up, (gauss_pyramid[i].shape[1], gauss_pyramid[i].shape[0]))
+        laplacian_pyramid.append(gauss_pyramid[i] - up_resized)
 
     laplacian_pyramid.append(gauss_pyramid[-1])
     return laplacian_pyramid
@@ -51,8 +53,15 @@ def _create_pyramid(video, pyramid_levels, pyramid_fn):
 def collapse_laplacian_pyramid(image_pyramid):
     img = image_pyramid.pop()
     while image_pyramid:
-        img = cv2.pyrUp(img) + (image_pyramid.pop() - 0)
+        upsampled = cv2.pyrUp(img)
+        next_img = image_pyramid.pop()
 
+        # Resize if needed
+        if upsampled.shape != next_img.shape:
+            upsampled = cv2.resize(upsampled, (next_img.shape[1], next_img.shape[0]))
+            #print(f"Resizing from {upsampled.shape} to {next_img.shape}")
+
+        img = upsampled + next_img
     return img
 
 

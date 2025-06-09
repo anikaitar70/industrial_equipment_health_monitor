@@ -14,20 +14,19 @@ def eulerian_magnification(vid_data, fps, freq_min, freq_max, amplification, pyr
 
     for i, vid in enumerate(vid_pyramid):
         # Skip top and bottom levels as you said
-        if i < skip_levels_at_top or i >= len(vid_pyramid) - 1:
-            continue
-
+        #if i < skip_levels_at_top or i >= len(vid_pyramid) - 1:
+        if i == 2:
         # Apply temporal filter to the current pyramid level (which is a 4D array)
-        bandpassed = temporal_ideal_filter(
-            vid,
-            fps,
-            freq_min=freq_min,
-            freq_max=freq_max,
-            amplification_factor=amplification
-        )
-
-        # Add filtered signal back to the pyramid level
-        vid_pyramid[i] += bandpassed
+            bandpassed = temporal_ideal_filter(
+                vid,
+                fps,
+                freq_min=freq_min,
+                freq_max=freq_max,
+                amplification_factor=amplification
+            )
+            # Add filtered signal back to the pyramid level
+            vid_pyramid[i] += bandpassed
+            continue
 
     # Reconstruct the video from the modified pyramid
     vid_data = collapse_laplacian_video_pyramid(vid_pyramid)

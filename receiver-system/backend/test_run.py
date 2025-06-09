@@ -2,9 +2,9 @@ from app.utils.video_handler import convert_to_grayscale, process_with_evm
 from pathlib import Path
 
 # Define paths
-input_video = Path("storage/incoming/test_clip.mp4")
-gray_output = Path("storage/processed/test_clip_gray.avi")
-evm_output = Path("storage/processed/test_clip_evm.avi")
+input_video = Path("storage/incoming/wrist.mp4")
+gray_output = Path("storage/processed/wrist_gray.avi")
+evm_output = Path("storage/processed/wrist_evm.avi")
 
 # Make sure output dir exists
 gray_output.parent.mkdir(parents=True, exist_ok=True)
