@@ -1,6 +1,10 @@
-# ![Equipment Health Monitoring System Logo](./public/favicon.png)
+<table align="center">
+  <tr>
+    <td><img src="FRONTEND/public/favicon.png" alt="Logo" width="100" /></td>
+    <td><h1><strong>Industrial Equipment Health Monitoring System</strong></h1></td>
+  </tr>
+</table>
 
-# Industrial Equipment Health Monitoring System
 
 A comprehensive system to monitor and analyze industrial equipment health using sensors, real-time data processing, and machine learning to predict maintenance needs and prevent failures.
 
