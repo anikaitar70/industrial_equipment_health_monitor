@@ -2,9 +2,11 @@ from fastapi import FastAPI
 from app.routers import video, sensor
 from app.routers import video  # make sure to have __init__.py files in the folders
 from app.utils.video_handler import convert_to_grayscale, run_evm
+from app.routers import video, sensor, video_stream
+
 
 app = FastAPI(title="Industrial Equipment Health Monitor Receiver")
-
+app.include_router(video_stream.router)
 app.include_router(video.router, prefix="/video", tags=["Video"])
 #grayscale_path = file_location.parent / f"{file_location.stem}_gray.mp4"
 #evm_output_path = file_location.parent / f"{file_location.stem}_evm.mp4"
