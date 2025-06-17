@@ -26,12 +26,12 @@ This project integrates sensor data from ESP32-CAM and vibration sensors to moni
 
 ---
 
-##  Technologies Used
-
-- **Hardware**: ESP32-CAM, Vibration sensors
-- **Backend**: FastAPI (Python), Machine Learning (e.g., TensorFlow/PyTorch)
-- **Frontend**: React.js with TypeScript, Tailwind CSS, Vite, shadcn-ui
-- **Communication**: MQTT / HTTP APIs
-- **Database**: MongoDB
+## Skills & Technologies:
+-IoT & Embedded Systems: ESP32-CAM, Vibration Sensor, Arduino IDE
+-Computer Vision: Eulerian Video Magnification (EVM), OpenCV, MatPlotlib, Scipy, Moviepy
+-Backend Development: FastAPI, Python, Asynchronous Processing
+-Networking: TCP Protocol, Custom Retransmission Logic, Microcontroller-PC Communication
+-Frontend: TypeScript, React, Streaming Integration
+-Data Handling: Frame Capture, Real-time Processing, Storage Optimization
 
 ---
