@@ -27,11 +27,11 @@ This project integrates sensor data from ESP32-CAM and vibration sensors to moni
 ---
 
 ##  Skills & Technologies:
--IoT & Embedded Systems: ESP32-CAM, Vibration Sensor, Arduino IDE /n
--Computer Vision: Eulerian Video Magnification (EVM), OpenCV, MatPlotlib, Scipy, Moviepy /n
--Backend Development: FastAPI, Python, Asynchronous Processing /n
--Networking: TCP Protocol, Custom Retransmission Logic, Microcontroller-PC Communication /n
--Frontend: TypeScript, React, Streaming Integration /n
--Data Handling: Frame Capture, Real-time Processing, Storage Optimization /n
+-IoT & Embedded Systems: ESP32-CAM, Vibration Sensor, Arduino IDE
+-Computer Vision: Eulerian Video Magnification (EVM), OpenCV, MatPlotlib, Scipy, Moviepy
+-Backend Development: FastAPI, Python, Asynchronous Processing
+-Networking: TCP Protocol, Custom Retransmission Logic, Microcontroller-PC Communication
+-Frontend: TypeScript, React, Streaming Integration
+-Data Handling: Frame Capture, Real-time Processing, Storage Optimization
 
 ---
